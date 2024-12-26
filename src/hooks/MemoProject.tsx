@@ -2,7 +2,7 @@
 import { useMemo, useState } from "react";
 
 const MemoProject = () => {
-  const [, setText] = useState("");
+  const [text, setText] = useState("");
   const [number, setNumber] = useState(1);
   const expensiveFunction = (n: any) => {
     console.log("Function re-rendered");
@@ -28,6 +28,7 @@ const MemoProject = () => {
         Count
       </button>
       <span>Total: {sum}</span>
+      <p>{text}</p>
     </div>
   );
 };
