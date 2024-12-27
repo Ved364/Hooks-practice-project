@@ -1,9 +1,10 @@
 import { useEffect } from "react";
-type Props2 = {
+type Props = {
   increment: () => void;
 };
 
-const Usecallback = (props: Props2) => {
+const Usecallback = (props: Props) => {
+  const { increment } = props;
   useEffect(() => {
     console.log("Increment function passed or updated");
   }, []);
@@ -11,7 +12,7 @@ const Usecallback = (props: Props2) => {
   return (
     <div>
       <p>Child Component</p>
-      <button onClick={props.increment}>Increment from Child</button>
+      <button onClick={increment}>Increment from Child</button>
     </div>
   );
 };

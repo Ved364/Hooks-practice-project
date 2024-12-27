@@ -1,17 +1,18 @@
 import { useEffect } from "react";
 
-type Props1 = {
+type Props = {
   message: string;
 };
 
-const Useeffect = (props: Props1) => {
+const Useeffect = (props: Props) => {
+  const { message } = props;
   useEffect(() => {
-    console.log(`Child Component received new message: ${props.message}`);
-  }, [props.message]);
+    console.log(`Child Component received new message: ${message}`);
+  }, [message]);
 
   return (
     <>
-      <div>{props.message}</div>
+      <div>{message}</div>
     </>
   );
 };

@@ -17,38 +17,59 @@ function App() {
   const [value, setValue] = useState(0);
   const [number, setNumber] = useState(1);
 
-  const toHyderabad = () => {
-    setPlace("Hyderabad");
-    console.log("Place set to Hyderabad");
-  };
-
-  const toMumbai = () => {
-    setPlace("Mumbai");
-    console.log("Place set to Mumbai");
-  };
-
-  const toPune = () => {
-    setPlace("Pune");
-    console.log("Place set to Pune");
-  };
-
-  const toBanglore = () => {
-    setPlace("Banglore");
-    console.log("Place set to Banglore");
-  };
-
-  const toKolkata = () => {
-    setPlace("Kolkata");
-    console.log("Place set to Kolkata");
-  };
-
-  const reset = () => {
-    setPlace("(select)");
-    console.log("Place reset");
-  };
+  const Tasks = [
+    {
+      message: "Place set to Hyderabad",
+      label: "Hyderabad",
+      toPlace: () => {
+        setPlace("Hyderabad");
+        console.log("Place set to Hyderabad");
+      },
+    },
+    {
+      message: "Place set to Banglore",
+      label: "Banglore",
+      toPlace: () => {
+        setPlace("Banglore");
+        console.log("Place set to Banglore");
+      },
+    },
+    {
+      message: "Place set to Mumbai",
+      label: "Mumbai",
+      toPlace: () => {
+        setPlace("Mumbai");
+        console.log("Place set to Mumbai");
+      },
+    },
+    {
+      message: "Place set to Pune",
+      label: "Pune",
+      toPlace: () => {
+        setPlace("Pune");
+        console.log("Place set to Pune");
+      },
+    },
+    {
+      message: "Place set to Kolkata",
+      label: "Kolkata",
+      toPlace: () => {
+        setPlace("Kolkata");
+        console.log("Place set to Kolkata");
+      },
+    },
+    {
+      message: "Reset",
+      label: "Reset",
+      toPlace: () => {
+        setPlace("(select)");
+        console.log("Place Reset");
+      },
+    },
+  ];
 
   const handleChangeMessage = () => {
-    setMessage(`Message updated!`);
+    setMessage("Message updated!");
   };
 
   const increment = () => {
@@ -77,17 +98,14 @@ function App() {
       <MemoProject />
 
       <h2>I prefer to choose {place} to work...</h2>
-      <Usestate setPlace={toHyderabad} label="Set to Hyderabad" />
-      <br />
-      <Usestate setPlace={toBanglore} label="Set to Hyderabad" />
-      <br />
-      <Usestate setPlace={toMumbai} label="Set to Mumbai" />
-      <br />
-      <Usestate setPlace={toPune} label="Set to Pune" />
-      <br />
-      <Usestate setPlace={toKolkata} label="Set to Kolkata" />
-      <br />
-      <Usestate setPlace={reset} label="Reset" />
+
+      {Tasks.map((tasks) => {
+        <Usestate
+          key={tasks.label}
+          changePlace={tasks.toPlace}
+          label={tasks.message}
+        />;
+      })}
       <br />
       <hr />
       <h1>React TypeScript UseEffect</h1>
@@ -106,7 +124,6 @@ function App() {
       <p>Current Number: {number}</p>
       <button onClick={incrementNumber}>Increment Number</button>
 
-      {/* Passing the number as a prop to the Child component */}
       <Usememo num={number} />
     </>
   );

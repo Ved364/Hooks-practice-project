@@ -1,10 +1,11 @@
 type Props = {
-  setPlace: () => void;
+  changePlace: () => void;
   label: string;
 };
 
 const Usestate = (props: Props) => {
-  return <button onClick={props.setPlace}>{props.label}</button>;
+  const { changePlace, label } = props;
+  return <button onClick={changePlace}>{label}</button>;
 };
 
 export default Usestate;

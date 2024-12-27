@@ -1,20 +1,21 @@
 import { useMemo } from "react";
 
-type Props3 = {
+type Props = {
   num: number;
 };
 
-const Usememo = (props: Props3) => {
+const Usememo = (props: Props) => {
+  const { num } = props;
   const squaredNumber = useMemo(() => {
     console.log("Computing square of the number...");
-    return props.num * props.num;
-  }, [props.num]);
+    return num * num;
+  }, [num]);
 
   return (
     <div>
       <h2>Child Component</h2>
       <p>
-        The square of {props.num} is {squaredNumber}
+        The square of {num} is {squaredNumber}
       </p>
     </div>
   );
