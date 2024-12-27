@@ -1,0 +1,79 @@
+.maindiv{
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+    height: 55vh; 
+    background-color: #c9b6c5; 
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+    margin-top: 15px;
+}
+
+.firstdiv{
+    background: rgba(152, 106, 166, 0.773);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 50vw;
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+}
+
+.first{
+    font-size: 25px;
+    font-weight: bolder;
+    font-style: oblique;
+}
+.firstbutton{
+    background: green;
+    width: auto;
+    font-size: 20px;
+    font-style:italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: whitesmoke;
+    border: none;
+    border-radius: 8px;
+}
+.seconddiv{
+    background: rgba(152, 106, 166, 0.773);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 50vw;
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+.second{
+    font-size: 25px;
+    font-weight: bolder;
+    font-style:oblique;
+}
+.secondbutton{
+    background: green;
+    width: auto;
+    font-size: 20px;
+    font-style:italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: whitesmoke;
+    border: none;
+    border-radius: 8px;
+}
+.age{
+    font-size: 25px;
+}
+
+.firstbutton:hover { 
+    background-color: orange; 
+}
+
+.secondbutton:hover { 
+    background-color: orange; 
+}

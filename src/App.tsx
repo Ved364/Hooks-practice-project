@@ -8,6 +8,26 @@ import Usestate from "./HooksD/Usestate";
 import Useeffect from "./HooksD/Useeffect";
 import Usecallback from "./HooksD/Usecallback";
 import Usememo from "./HooksD/Usememo";
+
+
+
+
+import './HooksJ/Styles/Count.css';
+import './HooksJ/Styles/ChangeName.css'; 
+import './HooksJ/Styles/EffectTwo.css';
+import Counterr from './HooksJ/Hooks-Callback/Counterr'; 
+import ListManager from './HooksJ/Hooks-Callback/ListManager';
+import EffectOne from './HooksJ/Hooks-Effect/EffectOne';
+import EffectTwo from './HooksJ/Hooks-Effect/EffectTwo';
+ import Count from './HooksJ/Hooks-State/Count';
+ import ChangeName from './HooksJ/Hooks-State/ChangeName';
+import FilteredList from './HooksJ/Hooks-Memo/Calculator';
+import Calculator from './HooksJ/Hooks-Memo/FilteredList';
+
+
+
+
+
 import { useState, useCallback } from "react";
 
 function App() {
@@ -96,6 +116,29 @@ function App() {
       <ButtonIncrement />
 
       <MemoProject />
+
+
+
+
+        <Counterr />
+
+        <ListManager />
+
+        <EffectOne />
+
+        <EffectTwo />
+
+        <Count />
+
+        <ChangeName />
+
+        <FilteredList />
+
+        <Calculator />
+
+
+
+
 
       <h2>I prefer to choose {place} to work...</h2>
 
